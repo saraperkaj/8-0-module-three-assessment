@@ -27,20 +27,20 @@ class PeoplePage extends Component {
     };
   }
 
-  fillPeopleArr = () => {
-    const result = this.state.people.find((person) => {
-      person.name === this.state.name;
-    });
-    if (this.state.input.includes({ result })) {
-      this.state.people.map((person) => {
-        this.setState({
-          name: person.name,
-          age: person.age,
-          gender: person.gender,
-        });
-      });
-    }
-  };
+  // fillPeopleArr = () => {
+  //   const result = this.state.people.find((person) => {
+  //     person.name === this.state.name;
+  //   });
+  //   if (this.state.input.includes({ result })) {
+  //     this.state.people.map((person) => {
+  //       this.setState({
+  //         name: person.name,
+  //         age: person.age,
+  //         gender: person.gender,
+  //       });
+  //     });
+  //   }
+  // };
 
   componentDidMount() {
     fetch("https://ghibliapi.herokuapp.com/people")

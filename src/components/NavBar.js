@@ -14,21 +14,33 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <header>
-      <aside>
-        <ul>
-          <li>
-            <Link to="/movies">Movies</Link>
-          </li>
-          <li>
-            <Link to="/people">People</Link>
-          </li>
-          <li>
-            <Link to="/locations">Locations</Link>
-          </li>
-        </ul>
-      </aside>
-    </header>
+    <nav>
+      <header>
+        <article>
+          <h1>
+            <Link to="/">
+              <img
+                src="https://i.pinimg.com/originals/f3/35/ee/f335ee72aa6d64bebafc8a41515e07e8.jpg"
+                alt=""
+              />
+            </Link>
+          </h1>
+        </article>
+        <aside>
+          <ul>
+            <li>
+              <Link to="/movies">Movies</Link>
+            </li>
+            <li>
+              <Link to="/people">People</Link>
+            </li>
+            <li>
+              <Link to="/locations">Locations</Link>
+            </li>
+          </ul>
+        </aside>
+      </header>
+    </nav>
   );
 };
 

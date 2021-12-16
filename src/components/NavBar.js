@@ -14,7 +14,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="nav">
       <header>
         <article>
           <h1>
@@ -26,20 +26,20 @@ const NavBar = () => {
             </Link>
           </h1>
         </article>
-        <aside>
-          <ul>
-            <li>
-              <Link to="/movies">Movies</Link>
-            </li>
-            <li>
-              <Link to="/people">People</Link>
-            </li>
-            <li>
-              <Link to="/locations">Locations</Link>
-            </li>
-          </ul>
-        </aside>
       </header>
+      <aside>
+        <ul>
+          <li className="li">
+            <a href="/movies">Movies</a>
+          </li>
+          <li className="li">
+            <Link to="/people">People</Link>
+          </li>
+          <li className="li">
+            <Link to="/locations">Locations</Link>
+          </li>
+        </ul>
+      </aside>
     </nav>
   );
 };

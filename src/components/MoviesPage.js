@@ -16,14 +16,31 @@ import "./MoviesPage.css";
 class MoviesPage extends Component {
   constructor() {
     super();
+    this.state = {
+      movies: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://ghibliapi.herokuapp.com/films")
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({
+          movies: json,
+        });
+      });
   }
 
   render() {
-    return (
-      <div className="movies">
-        <h1>Welcome to GhibliApp</h1>
-      </div>
-    );
+    const { movies } = this.state;
+    return null;
+    <div className="movies">
+      <h1>Select a Movie</h1>
+      <label for="movies">Choose A Movie:</label>
+      {movies.map((movie) => (
+        <ul key={movie.id}></ul>
+      ))}
+    </div>;
   }
 }
 
